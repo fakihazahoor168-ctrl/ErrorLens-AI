@@ -1,0 +1,29 @@
+{
+  "name": "errorlens-ai",
+  "version": "1.0.0",
+  "description": "AI-powered Error Explanation & Diagnostic Assistant with Vercel deployment support",
+  "main": "server/index.js",
+  "scripts": {
+    "dev:server": "node server/index.js",
+    "dev:client": "cd client && npm run dev",
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'dev:server'], { stdio: 'inherit', shell: true }); spawn('npm', ['run', 'dev:client'], { stdio: 'inherit', shell: true });\"",
+    "build": "cd client && npm install && npm run build",
+    "vercel-build": "cd client && npm install && npm run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "keywords": [
+    "ai",
+    "error-debugger",
+    "express",
+    "react",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT"
+}
